@@ -1,7 +1,7 @@
 {
-  "name": "vite-plugin-ngrok",
-  "version": "1.1.2",
-  "description": "A Vite plugin for seamless integration with ngrok, allowing you to easily share your local development server with anyone, anywhere.",
+  "name": "vite-plugin-check-env",
+  "version": "1.0.0",
+  "description": "A Vite plugin to check that required environment variables are available at build time. Scans your code for calls to a specified function and ensures the environment variables referenced in those calls are defined.",
   "type": "module",
   "exports": {
     ".": {
@@ -26,18 +26,21 @@
   "keywords": [
     "vite-plugin",
     "vite",
-    "ngrok"
+    "environment-variables",
+    "env",
+    "build-time-validation",
+    "development-tools"
   ],
-  "author": "Ross Gerbasi",
+  "author": "Mike",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aphex/vite-plugin-ngrok"
+    "url": "git+https://github.com/yourusername/vite-plugin-check-env"
   },
   "bugs": {
-    "url": "https://github.com/aphex/vite-plugin-ngrok/issues"
+    "url": "https://github.com/yourusername/vite-plugin-check-env/issues"
   },
-  "homepage": "https://github.com/aphex/vite-plugin-ngrok#readme",
+  "homepage": "https://github.com/yourusername/vite-plugin-check-env#readme",
   "devDependencies": {
     "@types/node": "^22.10.10",
     "prettier": "^3.4.2",

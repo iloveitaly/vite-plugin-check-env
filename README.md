@@ -1,68 +1,136 @@
 # Vite Plugin Check Environment
 
-A [vite](https://vitejs.dev/) plugin to automatically ensure all environment variables used in your project exist at
-build time.
-
+A [Vite](https://vitejs.dev/) plugin to automatically ensure all environment variables used in your project exist at build time.
 
 ## Features
 
-- No need to maintain a list of environment variables in your project.
-- You define your global env accessor, and the plugin will automatically check to ensure all those environment variables exist
+- **Build-time validation**: Catches missing environment variables before deployment
+- **No maintenance overhead**: No need to maintain a separate list of required environment variables
+- **Configurable function name**: Customize the function name that triggers environment variable checks
+- **TypeScript support**: Works with JavaScript, TypeScript, JSX, and TSX files
 
-## How to use
+## How it works
 
-1. Create a [Vite project](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
+The plugin scans your code for calls to a specified function (default: `requireEnv`) and ensures that all environment variables referenced in those calls are defined in your environment.
 
-2. Install the plugin into your project
+## Installation
 
 ```bash
-npm i -D vite-plugin-ngrok
+npm i -D vite-plugin-check-env
 ```
 
-3. Create / Configure a `vite.config.ts` file in your project root.
+## Basic Usage
+
+1. Create / Configure a `vite.config.ts` file in your project root:
 
 ```ts
-import { loadEnv, defineConfig } from 'vite'
-import { ngrok } from 'vite-plugin-ngrok'
+import { defineConfig } from 'vite'
+import { checkEnv } from 'vite-plugin-check-env'
 
 export default defineConfig({
-  // Note you should not store your ngrok token in your code/repo. Make sure to move this to 
-  // a more secure place before sharing your project.
   plugins: [
-    ngrok('NGROK_AUTH_TOKEN_IN_HERE'),
+    checkEnv(),
   ],
 })
 ```
 
-4. Fire up Vite as usual
+2. In your code, use the `requireEnv` function to access environment variables:
+
+```ts
+// This will be checked at build time
+const apiUrl = requireEnv('API_URL')
+const secretKey = requireEnv('SECRET_KEY')
+```
+
+3. Make sure your environment variables are defined in your `.env` file or environment:
+
+```env
+API_URL=https://api.example.com
+SECRET_KEY=your-secret-key
+```
+
+4. Run your build as usual:
 
 ```bash
 npm run dev
+# or
+npm run build
 ```
+
+If any environment variables are missing, the build will fail with a clear error message.
 
 ## Configuration
 
-The ngrok plugin can be configured in 3 ways. 
+### Custom Method Name
 
-1. No configuration. This will default to automatically use the vite port and `authtoken_from_env` will be set to `true`. This will look for `NGROK_AUTHTOKEN` in your environmental variables.
-
-```ts
-ngrok()
-```
-
-2. If given a string the plugin will assume this is your auth token and configure it automatically with the vite port.
+You can configure the function name that the plugin looks for:
 
 ```ts
-ngrok('NGROK_AUTH_TOKEN_IN_HERE'),
-```
+import { defineConfig } from 'vite'
+import { checkEnv } from 'vite-plugin-check-env'
 
-3. Full ngrok config. If given an object you can pass in any options from the ngrok config. This will be merged with the default port from vite so that does not need to be set. Config properties can be found in the [ngrok Javascript SDK Config docs](https://ngrok.github.io/ngrok-javascript/interfaces/Config.html)
-
-```ts
-ngrok({
-  domain: 'my-domain.ngrok.app',
-  compression: true,
-  authtoken: 'NGROK_AUTH_TOKEN_IN_HERE',
-  ...
+export default defineConfig({
+  plugins: [
+    checkEnv({
+      methodName: 'getEnv' // Look for getEnv() calls instead of requireEnv()
+    }),
+  ],
 })
 ```
+
+Then in your code:
+
+```ts
+const apiUrl = getEnv('API_URL')
+```
+
+## Example
+
+Here's a complete example of how to use the plugin:
+
+**vite.config.ts**
+```ts
+import { defineConfig } from 'vite'
+import { checkEnv } from 'vite-plugin-check-env'
+
+export default defineConfig({
+  plugins: [
+    checkEnv(),
+  ],
+})
+```
+
+**src/config.ts**
+```ts
+// These environment variables will be validated at build time
+export const config = {
+  apiUrl: requireEnv('VITE_API_URL'),
+  appName: requireEnv('VITE_APP_NAME'),
+  version: requireEnv('VITE_VERSION'),
+}
+```
+
+**.env**
+```env
+VITE_API_URL=https://api.example.com
+VITE_APP_NAME=My App
+VITE_VERSION=1.0.0
+```
+
+If you forget to define any of these variables, you'll get a build error like:
+
+```
+Missing environment variables for requireEnv: VITE_VERSION
+```
+
+## API
+
+### `checkEnv(options?)`
+
+#### Options
+
+- `methodName` (string, optional): The function name to look for in your code. Default: `'requireEnv'`
+
+## License
+
+MIT

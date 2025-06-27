@@ -1,39 +1,49 @@
-import type { Plugin } from 'vite'
-import pc from 'picocolors'
-import _ngrok, { type Listener, type Config } from '@ngrok/ngrok'
+import type { Plugin, ResolvedConfig } from 'vite'
+import { loadEnv } from 'vite'
+
+export interface CheckEnvOptions {
+  /**
+   * The function name to check for in the code (default: 'requireEnv')
+   */
+  methodName?: string
+}
 
 /**
- * Vite ngrok plugin allowing you to expose your local server to the internet.
+ * Vite plugin to check that required environment variables are available at build time.
+ * Scans your code for calls to a specified function (default: requireEnv) and ensures
+ * the environment variables referenced in those calls are defined.
  */
-export const ngrok = (options?: Config | string) =>
-  ({
-    name: 'ngrok',
-    configureServer({ config, httpServer }) {
-      let listener: Listener
-      httpServer?.on('listening', async () => {
-        const address = httpServer.address()
-        if (listener || !address || typeof address === 'string') return
+export const checkEnv = (options: CheckEnvOptions = {}) => {
+  const methodName = options.methodName || 'requireEnv'
+  let env: Record<string, string> = {}
 
-        listener = await _ngrok.forward({
-          addr: address.port,
-          ...(typeof options === 'string'
-            ? { authtoken: options }
-            : !options
-              ? { authtoken_from_env: true }
-              : options),
-        })
-
-        const url = listener.url()
-        if (!url) return
-
-        if (Array.isArray(config.server.allowedHosts)) {
-          config.server.allowedHosts.push(new URL(url).hostname)
-        }
-
-        config.logger.info(pc.magenta('  ➜') + pc.magenta('  ngrok:   ') + pc.cyan(url))
-      })
-
-      // Clean up ngrok when the server closes
-      httpServer?.on('close', async () => listener?.close())
+  return {
+    name: 'vite-plugin-check-env',
+    enforce: 'pre',
+    configResolved(config: ResolvedConfig) {
+      env = loadEnv(config.mode, process.cwd())
     },
-  }) satisfies Plugin
+    transform(code: string, id: string) {
+      // Only check JS/TS files
+      if (!/\.(js|ts|jsx|tsx)$/.test(id)) return
+
+      const requireEnvRegex = new RegExp(`${methodName}\\(["'\`](.*?)["'\`]\\)`, 'g')
+      let match
+      const missingVars = new Set<string>()
+
+      while ((match = requireEnvRegex.exec(code)) !== null) {
+        const envKey = match[1]
+        if (!env[envKey]) {
+          missingVars.add(envKey)
+        }
+      }
+
+      if (missingVars.size > 0) {
+        const missingVarsList = Array.from(missingVars).join(', ')
+        throw new Error(
+          `Missing environment variables for ${methodName}: ${missingVarsList}`
+        )
+      }
+    },
+  } satisfies Plugin
+}
