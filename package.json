@@ -46,7 +46,5 @@
     "vite": "^6.0.11"
   },
   "dependencies": {
-    "@ngrok/ngrok": "^1.4.1",
-    "picocolors": "^1.1.1"
   }
 }
