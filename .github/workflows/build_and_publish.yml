@@ -33,7 +33,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
-          version-file: "./package.json,./package-lock.json"
+          version-file: "./package.json,./pnpm-lock.json"
           output-file: "CHANGELOG.md"
 
       - name: Publish to NPM
