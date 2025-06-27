@@ -5,10 +5,9 @@ build time.
 
 
 ## Features
-- **Ngrok Integration**: Quickly expose your Vite development server to the internet using Ngrok tunnels.
-- **Dynamic URLs**: Automatically updates Ngrok URLs when your local server restarts or when the Ngrok tunnel is reopened.
-- **Custom Configuration**: Fine-tune Ngrok options through a simple configuration file.
-- **Simple Sharing**: Just install the plugin, add your auth token, and start sharing your project.
+
+- No need to maintain a list of environment variables in your project.
+- You define your global env accessor, and the plugin will automatically check to ensure all those environment variables exist
 
 ## How to use
 
