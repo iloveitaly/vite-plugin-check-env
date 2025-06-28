@@ -31,16 +31,16 @@
     "build-time-validation",
     "development-tools"
   ],
-  "author": "Mike",
+  "author": "Michael Bianco <mike@mikebian.co>",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/vite-plugin-check-env"
+    "url": "git+https://github.com/iloveitaly/vite-plugin-check-env"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/vite-plugin-check-env/issues"
+    "url": "https://github.com/iloveitaly/vite-plugin-check-env/issues"
   },
-  "homepage": "https://github.com/yourusername/vite-plugin-check-env#readme",
+  "homepage": "https://github.com/iloveitaly/vite-plugin-check-env#readme",
   "devDependencies": {
     "@types/node": "^24.0.6",
     "prettier": "^3.4.2",
