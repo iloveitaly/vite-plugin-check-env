@@ -127,14 +127,6 @@ If you forget to define any of these variables, you'll get a build error like:
 Missing environment variables for requireEnv: VITE_VERSION
 ```
 
-## API
-
-### `checkEnv(options?)`
-
-#### Options
-
-- `methodName` (string, optional): The function name to look for in your code. Default: `'requireEnv'`
-
 ## License
 
 MIT
