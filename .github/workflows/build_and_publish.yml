@@ -16,18 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: ASDF Parse
-        uses: kota65535/github-asdf-parse-action@v2.0.0
-        id: versions
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "${{ steps.versions.outputs.nodejs }}"
-          registry-url: 'https://registry.npmjs.org'
-
+      - uses: jdx/mise-action@v2
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v6
@@ -38,7 +27,7 @@ jobs:
 
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: npm publish
+        run: pnpm publish
         env:
           # `gh secret set NPM_TOKEN --app actions --body $NPM_TOKEN`
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
