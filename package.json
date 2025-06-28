@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/yourusername/vite-plugin-check-env#readme",
   "devDependencies": {
-    "@types/node": "^22.10.10",
+    "@types/node": "^24.0.6",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
