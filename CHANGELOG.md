@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.0...v1.2.1) (2025-11-01)
+
+
+### Bug Fixes
+
+* let's use odic for publishing ([2d48430](https://github.com/iloveitaly/vite-plugin-check-env/commit/2d484302002987901e689132f9fa10ffe5f87390))
+
+
+
 # [1.2.0](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.1.0...v1.2.0) (2025-11-01)
 
 
