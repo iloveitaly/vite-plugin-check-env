@@ -2,7 +2,7 @@
 
 A [Vite](https://vitejs.dev/) plugin to automatically ensure all environment variables used in your project exist at build time.
 
-It does this in a very naive way by scanning your code for calls to a specified function (default: `requireEnv`) and checking that all environment variables referenced in those calls are defined in your environment.
+It does this in a very simple way by scanning your code for calls to a specified function (default: `requireEnv`) and checking that all environment variables referenced in those calls are defined in your environment.
 
 It's simple, and it works. [Here's an example](https://github.com/iloveitaly/python-starter-template) of it being used in a project.
 
@@ -127,6 +127,4 @@ If you forget to define any of these variables, you'll get a build error like:
 Missing environment variables for requireEnv: VITE_VERSION
 ```
 
-## License
-
-MIT
+## [MIT License](LICENSE.md)
