@@ -1,4 +1,4 @@
-# Vite Plugin Check Environment
+# Vite: Assert Environment Variables Exist
 
 A [Vite](https://vitejs.dev/) plugin to automatically ensure all environment variables used in your project exist at build time.
 
