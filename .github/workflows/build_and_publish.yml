@@ -28,9 +28,6 @@ jobs:
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: pnpm publish
-        env:
-          # `gh secret set NPM_TOKEN --app actions --body $NPM_TOKEN`
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
