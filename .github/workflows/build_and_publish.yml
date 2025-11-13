@@ -9,6 +9,7 @@ on:
 # by default, permissions are read-only, read + write is required for git pushes
 permissions:
   contents: write
+  id-token: write  # Required for OIDC
 
 jobs:
   build-and-publish:
