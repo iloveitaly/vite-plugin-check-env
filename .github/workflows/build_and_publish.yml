@@ -28,7 +28,7 @@ jobs:
 
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: pnpm publish
+        run: pnpm publish --provenance --access public
 
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
