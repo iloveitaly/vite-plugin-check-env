@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.2...v1.2.3) (2025-11-13)
+
+
+### Bug Fixes
+
+* grant write permission for id-token ([1b33dd2](https://github.com/iloveitaly/vite-plugin-check-env/commit/1b33dd2c1df375b545001adbbead63907b7c4b8e))
+
+
+
 ## [1.2.2](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.1...v1.2.2) (2025-11-13)
 
 
