@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.1...v1.2.2) (2025-11-13)
+
+
+### Bug Fixes
+
+* trigger another release ([2a851ca](https://github.com/iloveitaly/vite-plugin-check-env/commit/2a851caca0d0069292f45746c16ac6faecf26d33))
+
+
+
 ## [1.2.1](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.0...v1.2.1) (2025-11-01)
 
 
