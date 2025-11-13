@@ -1,3 +1,12 @@
+## [1.2.4](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.3...v1.2.4) (2025-11-13)
+
+
+### Bug Fixes
+
+* try npm for trusted publisher support ([159c709](https://github.com/iloveitaly/vite-plugin-check-env/commit/159c709df483122329a4c6b522799c8277853ed2))
+
+
+
 ## [1.2.3](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.2...v1.2.3) (2025-11-13)
 
 
@@ -41,15 +50,6 @@
 * another attempt to trigger a build ([dabf7b0](https://github.com/iloveitaly/vite-plugin-check-env/commit/dabf7b06891653f4061729f3b272c4030b355ac1))
 * sync repo metadata ([ba94aa1](https://github.com/iloveitaly/vite-plugin-check-env/commit/ba94aa1c3dd5d6a1e26124ddb1fa2ecb79b58a3a))
 * trigger new build ([9d6fb6b](https://github.com/iloveitaly/vite-plugin-check-env/commit/9d6fb6b70d9ba412a859aecd04ae5a52697be3df))
-
-
-
-# [1.1.0](https://github.com/iloveitaly/vite-plugin-check-env/compare/b0d8ea4dd155481797ab8a6651d66602015d299a...v1.1.0) (2025-06-27)
-
-
-### Features
-
-* let's see if we can trigger a build ([b0d8ea4](https://github.com/iloveitaly/vite-plugin-check-env/commit/b0d8ea4dd155481797ab8a6651d66602015d299a))
 
 
 
