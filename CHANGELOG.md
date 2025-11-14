@@ -1,3 +1,12 @@
+## [1.2.7](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.6...v1.2.7) (2025-11-14)
+
+
+### Bug Fixes
+
+* Add OIDC token generation step for npm publishing ([d73f5da](https://github.com/iloveitaly/vite-plugin-check-env/commit/d73f5da626339318a0c7dc090eccd4faffe097ff))
+
+
+
 ## [1.2.6](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.5...v1.2.6) (2025-11-13)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * grant write permission for id-token ([1b33dd2](https://github.com/iloveitaly/vite-plugin-check-env/commit/1b33dd2c1df375b545001adbbead63907b7c4b8e))
-
-
-
-## [1.2.2](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.1...v1.2.2) (2025-11-13)
-
-
-### Bug Fixes
-
-* trigger another release ([2a851ca](https://github.com/iloveitaly/vite-plugin-check-env/commit/2a851caca0d0069292f45746c16ac6faecf26d33))
 
 
 
