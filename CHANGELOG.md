@@ -1,3 +1,12 @@
+## [1.2.8](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.7...v1.2.8) (2025-11-15)
+
+
+### Bug Fixes
+
+* Set npm auth token before publishing to NPM ([4d02fa9](https://github.com/iloveitaly/vite-plugin-check-env/commit/4d02fa925b3c1e604dc3092e04f04fbcc6973102))
+
+
+
 ## [1.2.7](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.6...v1.2.7) (2025-11-14)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * try npm for trusted publisher support ([159c709](https://github.com/iloveitaly/vite-plugin-check-env/commit/159c709df483122329a4c6b522799c8277853ed2))
-
-
-
-## [1.2.3](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.2...v1.2.3) (2025-11-13)
-
-
-### Bug Fixes
-
-* grant write permission for id-token ([1b33dd2](https://github.com/iloveitaly/vite-plugin-check-env/commit/1b33dd2c1df375b545001adbbead63907b7c4b8e))
 
 
 
