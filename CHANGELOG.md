@@ -1,3 +1,12 @@
+## [1.2.10](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.9...v1.2.10) (2025-11-15)
+
+
+### Bug Fixes
+
+* attempt to simplify OIDC build ([b456dfb](https://github.com/iloveitaly/vite-plugin-check-env/commit/b456dfbabc045b05c73ad9ebd883f0a6a9f325b5))
+
+
+
 ## [1.2.9](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.8...v1.2.9) (2025-11-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * attempt to fix OIDC ([1855b5e](https://github.com/iloveitaly/vite-plugin-check-env/commit/1855b5e6f7336ef983b7a2dbfcd0fb013a4ace0f))
-
-
-
-## [1.2.5](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.4...v1.2.5) (2025-11-13)
-
-
-### Bug Fixes
-
-* OIDC attempt ([ab68cd5](https://github.com/iloveitaly/vite-plugin-check-env/commit/ab68cd5146bd84887a58f1818b96c3bf900dbf36))
 
 
 
