@@ -25,19 +25,9 @@ jobs:
           github-token: ${{ secrets.github_token }}
           version-file: "./package.json"
           output-file: "CHANGELOG.md"
-      - name: Generate OIDC token for npm
-        id: oidc
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const token = await core.getIDToken({ audience: 'https://registry.npmjs.org' });
-            core.setOutput('token', token);
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=${{ steps.oidc.outputs.token }}
-          pnpm publish --provenance --access public
+        run: pnpm publish --provenance --access public
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: softprops/action-gh-release@v2
