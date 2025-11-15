@@ -1,3 +1,12 @@
+## [1.2.9](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.8...v1.2.9) (2025-11-15)
+
+
+### Bug Fixes
+
+* Update tool versions to latest ([ed4448b](https://github.com/iloveitaly/vite-plugin-check-env/commit/ed4448ba15696fc58cae957b7d80717618d55e57))
+
+
+
 ## [1.2.8](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.7...v1.2.8) (2025-11-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * OIDC attempt ([ab68cd5](https://github.com/iloveitaly/vite-plugin-check-env/commit/ab68cd5146bd84887a58f1818b96c3bf900dbf36))
-
-
-
-## [1.2.4](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.3...v1.2.4) (2025-11-13)
-
-
-### Bug Fixes
-
-* try npm for trusted publisher support ([159c709](https://github.com/iloveitaly/vite-plugin-check-env/commit/159c709df483122329a4c6b522799c8277853ed2))
 
 
 
