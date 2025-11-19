@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-check-env",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "A Vite plugin to check that required environment variables are available at build time. Scans your code for calls to a specified function and ensures the environment variables referenced in those calls are defined.",
   "type": "module",
   "exports": {
