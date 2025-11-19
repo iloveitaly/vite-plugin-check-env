@@ -20,12 +20,12 @@ The plugin scans your code for calls to a specified function (default: `requireE
 ## Installation
 
 ```bash
-npm i -D vite-plugin-check-env
+pnpm i -D vite-plugin-check-env
 ```
 
 ## Basic Usage
 
-1. Create / Configure a `vite.config.ts` file in your project root:
+1. Update `vite.config.ts`:
 
 ```ts
 import { defineConfig } from 'vite'
