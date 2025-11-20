@@ -1,3 +1,12 @@
+## [1.2.15](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.14...v1.2.15) (2025-11-20)
+
+
+### Bug Fixes
+
+* add pnpm install before build in CI pipeline ([c3d82cf](https://github.com/iloveitaly/vite-plugin-check-env/commit/c3d82cfd5a4c338a1e2c627d22aa89652ce38d3c))
+
+
+
 ## [1.2.14](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.12...v1.2.14) (2025-11-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * attempt to simplify OIDC build ([b456dfb](https://github.com/iloveitaly/vite-plugin-check-env/commit/b456dfbabc045b05c73ad9ebd883f0a6a9f325b5))
-
-
-
-## [1.2.9](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.8...v1.2.9) (2025-11-15)
-
-
-### Bug Fixes
-
-* Update tool versions to latest ([ed4448b](https://github.com/iloveitaly/vite-plugin-check-env/commit/ed4448ba15696fc58cae957b7d80717618d55e57))
 
 
 
