@@ -25,7 +25,7 @@ jobs:
           github-token: ${{ secrets.github_token }}
           version-file: "./package.json"
           output-file: "CHANGELOG.md"
-      - run: pnpm build
+      - run: pnpm install && pnpm build
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: pnpm publish --provenance --access public
