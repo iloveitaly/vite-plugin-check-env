@@ -1,3 +1,12 @@
+## [1.2.14](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.12...v1.2.14) (2025-11-20)
+
+
+### Bug Fixes
+
+* run pnpm build before npm publish in workflow ([d9483ae](https://github.com/iloveitaly/vite-plugin-check-env/commit/d9483ae15e521d8fe60abc9d4177eaa66b2b461f))
+
+
+
 ## [1.2.12](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.11...v1.2.12) (2025-11-19)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * Update tool versions to latest ([ed4448b](https://github.com/iloveitaly/vite-plugin-check-env/commit/ed4448ba15696fc58cae957b7d80717618d55e57))
-
-
-
-## [1.2.8](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.7...v1.2.8) (2025-11-15)
-
-
-### Bug Fixes
-
-* Set npm auth token before publishing to NPM ([4d02fa9](https://github.com/iloveitaly/vite-plugin-check-env/commit/4d02fa925b3c1e604dc3092e04f04fbcc6973102))
 
 
 
