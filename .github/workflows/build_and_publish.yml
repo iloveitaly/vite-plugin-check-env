@@ -9,7 +9,7 @@ on:
 # by default, permissions are read-only, read + write is required for git pushes
 permissions:
   contents: write
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
 
 jobs:
   build-and-publish:
@@ -25,6 +25,7 @@ jobs:
           github-token: ${{ secrets.github_token }}
           version-file: "./package.json"
           output-file: "CHANGELOG.md"
+      - run: pnpm build
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: pnpm publish --provenance --access public
