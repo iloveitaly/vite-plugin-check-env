@@ -1,3 +1,12 @@
+## [1.2.17](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.16...v1.2.17) (2025-11-27)
+
+
+### Bug Fixes
+
+* another check to make sure the build is operating properly ([ee6096e](https://github.com/iloveitaly/vite-plugin-check-env/commit/ee6096e529c92863af81148ac43fa22819490ad9))
+
+
+
 ## [1.2.16](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.15...v1.2.16) (2025-11-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * maybe fix automated release issue ([60837fc](https://github.com/iloveitaly/vite-plugin-check-env/commit/60837fcf91d3cdaf3e7081d5ee082e74b3c8c336))
-
-
-
-## [1.2.11](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.10...v1.2.11) (2025-11-19)
-
-
-### Bug Fixes
-
-* build exports ([626d6e7](https://github.com/iloveitaly/vite-plugin-check-env/commit/626d6e799b627cd990d520f6bbb41ec37755df58))
 
 
 
