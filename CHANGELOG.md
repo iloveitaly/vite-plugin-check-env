@@ -1,3 +1,12 @@
+## [1.2.16](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.15...v1.2.16) (2025-11-27)
+
+
+### Bug Fixes
+
+* I wonder if removing the build and install from the publish script will fail ([405a6b7](https://github.com/iloveitaly/vite-plugin-check-env/commit/405a6b7ccc325644b55b050a5994d01a5b6707b4))
+
+
+
 ## [1.2.15](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.14...v1.2.15) (2025-11-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * build exports ([626d6e7](https://github.com/iloveitaly/vite-plugin-check-env/commit/626d6e799b627cd990d520f6bbb41ec37755df58))
-
-
-
-## [1.2.10](https://github.com/iloveitaly/vite-plugin-check-env/compare/v1.2.9...v1.2.10) (2025-11-15)
-
-
-### Bug Fixes
-
-* attempt to simplify OIDC build ([b456dfb](https://github.com/iloveitaly/vite-plugin-check-env/commit/b456dfbabc045b05c73ad9ebd883f0a6a9f325b5))
 
 
 
