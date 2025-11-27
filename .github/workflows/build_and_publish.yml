@@ -28,11 +28,8 @@ jobs:
       - run: pnpm install && pnpm build
       - name: Publish to NPM
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: |
-          pnpm install
-          pnpm build
-          # these magic flags use the OIDC token to authenticate instead of a static NPM token
-          pnpm publish --provenance --access public
+        # these magic flags use the OIDC token to authenticate instead of a static NPM token
+        run: pnpm publish --provenance --access public
       - name: Github Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: softprops/action-gh-release@v2
