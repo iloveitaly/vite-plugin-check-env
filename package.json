@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/iloveitaly/vite-plugin-check-env#readme",
   "devDependencies": {
-    "@types/node": "^25.0.2",
+    "@types/node": "^26.0.0",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^6.0.2",
